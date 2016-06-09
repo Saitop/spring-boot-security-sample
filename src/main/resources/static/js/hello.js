@@ -27,7 +27,6 @@ angular.module('hello', ['ngRoute'])
 
     .controller('navigation', function ($rootScope, $http, $location) {
       var self = this;
-
       var authenticate = function (credentials, callback) {
         var headers = credentials
             ? {authorization: "Basic " + btoa(credentials.username + ":" + credentials.password)}
