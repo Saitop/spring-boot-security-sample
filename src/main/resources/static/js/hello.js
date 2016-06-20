@@ -50,8 +50,8 @@ angular.module('hello', ['ngRoute'])
       authenticate();
       self.credentials = {};
 
-      self.login = function() {
-        authenticate(self.credentials, function() {
+      self.login = function () {
+        authenticate(self.credentials, function () {
           if ($rootScope.authenticated) {
             $location.path("/");
             self.error = false;
@@ -62,8 +62,8 @@ angular.module('hello', ['ngRoute'])
         });
       };
 
-      self.logout = function() {
-        $http.post('logout', {}).finally(function() {
+      self.logout = function () {
+        $http.post('logout', {}).finally(function () {
           $rootScope.authenticated = false;
           $location.path("/");
         });
